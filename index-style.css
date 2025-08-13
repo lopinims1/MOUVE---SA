@@ -1,11 +1,14 @@
 * {
     max-width: 100%;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: Poppins, sans-serif;
     text-decoration: none;
     list-style: none;
     color: #F6EEE8;
+    max-width: 100%;
+    min-width: none;
 }
 
 header {
@@ -19,7 +22,7 @@ header {
 header ul {
     display: flex;
     gap: 30px;
-    margin-right: 38px;
+    margin-left: 67%;
 }
 
 header #header-logo {
@@ -56,15 +59,49 @@ header ul li img:hover {
 }
 
 main {
+    position: fixed;
     display: flex;
     justify-content: center;
-    padding: 120px;
+    width: 100%;
+    height: 40%;
     background: linear-gradient(77deg, #23536B, #5DA8B9);
+    min-width: 100vh;
+}
+
+main .copy-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 main h1 {
-    font-size: 50px;
-    font-weight: bolder;
+    position: absolute;
+    font-family: Poppins, extrabold;
+    font-size: 54px;
+    left: 125px;
+    top: 17.5%;
+    line-height: 116.4%;
+    
+}
+
+main p#mc-1 {
+    position: absolute;
+    font-family: Poppins, sans-serif;
+    font-size: 16.5px;
+    left: 125px;
+    margin-top: 5%;
+    line-height: 117.4%;
+}
+
+main img {
+    position: fixed;
+    margin-right: 20px;
+    margin-top: 3%;
+    width: 20%;
+
+    
     
 }
 
