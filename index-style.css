@@ -12,6 +12,7 @@
 }
 
 header {
+    position: relative;
     display: flex;
     align-items: center;
     padding: 18px 0px 18px;
@@ -20,15 +21,16 @@ header {
 }
 
 header ul {
+    position: absolute;
     display: flex;
     gap: 30px;
-    margin-left: 67%;
+    right: 3.6%;
 }
 
 header #header-logo {
     display: flex;
     align-items: center;
-    margin-left: 30px;
+    margin-left: 3.7%;
     width: 230px;
 }
 
@@ -59,7 +61,7 @@ header ul li img:hover {
 }
 
 main {
-    position: fixed;
+    position: absolute;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -69,19 +71,20 @@ main {
 }
 
 main .copy-left {
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: first baseline;
     width: 100%;
 }
 
 main h1 {
     position: absolute;
     font-family: Poppins, extrabold;
-    font-size: 54px;
+    font-size: 55.5px;
     left: 125px;
-    top: 17.5%;
+    margin-top: 3%;
     line-height: 116.4%;
     
 }
@@ -89,23 +92,85 @@ main h1 {
 main p#mc-1 {
     position: absolute;
     font-family: Poppins, sans-serif;
-    font-size: 16.5px;
+    font-size: 16.3px;
     left: 125px;
-    margin-top: 5%;
-    line-height: 117.4%;
+    margin-top: 10.3%;
+    line-height: 125.4%;
 }
 
 main img {
-    position: fixed;
-    margin-right: 20px;
-    margin-top: 3%;
-    width: 20%;
-
-    
+    position: relative;
+    margin-left: 12%;
+    width: 22%;
     
 }
 
+main .copy-right {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: first baseline;
+    width: 100%;
+}
 
+main h2 {
+    position: absolute;
+    font-family: Poppins, extrabold;
+    font-size: 37.5px;
+    right: 12%;
+    margin-top: 5%;
+    line-height: 116.4%;
+    
+}
 
+main p#mc-2 {
+    position: absolute;
+    font-family: Poppins, sans-serif;
+    font-weight: 300;
+    font-size: 17.3px;
+    right: 11.7%;
+    margin-top: 10.3%;
+    line-height: 125.4%;
+}
+
+section#tutorial {
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 100vh;
+    margin-top: 19%;
+    background: linear-gradient(55deg, #161518, #2e2d30);
+   
+}
+
+section#tutorial .deco-bg {
+    position: relative;
+    width: 58%;
+    margin-top: 2%;
+    
+}
+
+section#tutorial #title-1 h1 {
+    position: absolute;
+    font-family: Poppins, extrabold;
+    font-size: 43px;
+    right: 15%;
+    margin-top: -27%;
+    
+}
+
+section#tutorial ul {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    right: 15%;
+    margin-top: -66%;
+    
+  
+}
 
 
