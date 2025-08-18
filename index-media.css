@@ -1,0 +1,157 @@
+@media (max-width: 1440px) {
+    
+    header ul {
+        right: 2%;
+    }
+
+    main {
+        height: 34%;  
+    }
+
+    main img {
+        margin-left: 14%;
+        width: 25%;
+    }
+
+    main h1 {
+        font-size: 48px;
+        left: 6%;
+        margin-top: 3.1%;
+        line-height: 110.4%;
+    }
+
+    main p#mc-1 {
+        font-size: 14.5px;
+        left: 6%;
+        margin-top: 11.5%;
+    }
+
+    main h2 {
+        font-size: 32px;
+        right: 10.7%;
+        margin-top: 6%;
+        line-height: 110.4%;
+    }
+
+    main p#mc-2 {
+        font-size: 15.5px;
+        right: 9.7%;
+        margin-top: 11.7%;
+    }
+
+    
+
+    section#tutorial #title-1 h1 {
+        font-size: 38px;
+        right: 9%;
+        margin-top: -28.5%;
+    }
+
+    section#tutorial ul {
+        font-size: 17px;
+        right: 10.4%;
+        margin-top: -20%;
+        list-style: url(index-imgs/verify-list.svg);
+        
+    }
+
+    section#tutorial #title-2 h1 {
+        position: absolute;
+        font-size: 40px;
+        line-height: 111.4%;
+        left: 5%;
+        margin-top: 2%;
+        
+    }
+
+    section#tutorial .linha{
+        display: flex;
+    }
+
+    section#tutorial .p-1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3%;
+        
+    }
+
+    section#tutorial .homem-section, .p-1{
+        width: 68%;
+        
+    }
+
+    section#tutorial .homem-section img{
+        width: 100%;
+    }
+
+    section#tutorial .p-1 p{
+        margin: 10px 70px;
+        
+    }  
+
+    section#planos {
+        background: linear-gradient(77deg, #23536B, #5DA8B9);
+        height: 70vh;
+
+    }
+
+
+
+    footer {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 25vh;
+        background: linear-gradient(#2e2d30, #161518ef);
+    }
+
+    
+        
+
+}
+
+@media (max-width: 1024px) {
+    
+    header ul {
+        right: 2%;
+    }
+
+    main {
+        height: 34%;  
+    }
+
+    main img {
+        margin-left: 14%;
+        width: 25%;
+    }
+
+    main h1 {
+        font-size: 48px;
+        left: 6%;
+        margin-top: 3.1%;
+        line-height: 110.4%;
+    }
+
+    main p#mc-1 {
+        font-size: 14.5px;
+        left: 6%;
+        margin-top: 11.5%;
+    }
+
+    main h2 {
+        font-size: 32px;
+        right: 10.7%;
+        margin-top: 6%;
+        line-height: 110.4%;
+    }
+
+    main p#mc-2 {
+        font-size: 15.5px;
+        right: 9.7%;
+        margin-top: 11.7%;
+    }
+
+}

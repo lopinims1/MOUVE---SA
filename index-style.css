@@ -94,7 +94,7 @@ main p#mc-1 {
     font-family: Poppins, sans-serif;
     font-size: 16.3px;
     left: 125px;
-    margin-top: 10.3%;
+    margin-top: 10.9%;
     line-height: 125.4%;
 }
 
@@ -135,7 +135,6 @@ main p#mc-2 {
 }
 
 section#tutorial {
- 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -149,6 +148,7 @@ section#tutorial {
 section#tutorial .deco-bg {
     position: relative;
     width: 58%;
+    height: 1%;
     margin-top: 2%;
     
 }
@@ -156,8 +156,8 @@ section#tutorial .deco-bg {
 section#tutorial #title-1 h1 {
     position: absolute;
     font-family: Poppins, extrabold;
-    font-size: 43px;
-    right: 15%;
+    font-size: 46px;
+    right: 13%;
     margin-top: -27%;
     line-height: 111.4%;
     
@@ -168,10 +168,29 @@ section#tutorial ul {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    right: 15%;
-    margin-top: -66%;
-    list-style: url(index-imgs/verify-list.svg);
-  
+    right: 9.6%;
+    margin-top: -18%;
+    list-style: none;
+ 
+}
+
+section#tutorial ul li { 
+    font-size: 23.5px;
+    font-weight: 300;
+    padding-left: 36px; /* espaço pro ícone */
+    position: relative;
+}
+
+section#tutorial ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); /* centraliza verticalmente */
+    width: 24px;   
+    height: 24px;  
+    background: url("./index-imgs/verify-list.svg") no-repeat center;
+    background-size: contain; /* faz caber certinho */
 }
 
 section#tutorial .sec-up {
@@ -180,117 +199,56 @@ section#tutorial .sec-up {
 
 }
 
-@media (max-width: 1440px) {
+section#tutorial #title-2 h1 {
+    position: absolute;
+    font-family: Poppins, extrabold;
+    font-size: 52px;
+    line-height: 111.4%;
+    left: 5%;
+    margin-top: 3%;
     
-    header ul {
-        right: 2%;
-    }
+}
 
-    main {
-        height: 34%;  
-    }
+section#tutorial .linha{
+    display: flex;
+}
 
-    main img {
-        margin-left: 14%;
-        width: 25%;
-    }
-
-    main h1 {
-        font-size: 48px;
-        left: 6%;
-        margin-top: 3.1%;
-        line-height: 110.4%;
-    }
-
-    main p#mc-1 {
-        font-size: 14.5px;
-        left: 6%;
-        margin-top: 11.5%;
-    }
-
-    main h2 {
-        font-size: 32px;
-        right: 10.7%;
-        margin-top: 6%;
-        line-height: 110.4%;
-    }
-
-    main p#mc-2 {
-        font-size: 15.5px;
-        right: 9.7%;
-        margin-top: 11.7%;
-    }
-
+section#tutorial .p-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4%;
+    margin-left: 1%;
     
+}
 
-    section#tutorial #title-1 h1 {
-        font-size: 38px;
-        right: 9%;
-        margin-top: -28.5%;
-    }
-
-    section#tutorial ul {
-        font-size: 17px;
-        right: 10.4%;
-        margin-top: -20%;
-        list-style: url(index-imgs/verify-list.svg);
-        
-    }
-
-    section#tutorial #title-2 h1 {
-        position: absolute;
-        font-size: 40px;
-        line-height: 111.4%;
-        left: 5%;
-        margin-top: 2%;
-        
-    }
-
-    section#tutorial .linha{
-        display: flex;
-    }
-
-    section#tutorial .p-1{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-top: 3%;
-        
-    }
-
-    section#tutorial .homem-section, .p-1{
-        width: 68%;
-        
-    }
-
-    section#tutorial .homem-section img{
-        width: 100%;
-    }
-
-    section#tutorial .p-1 p{
-        margin: 10px 70px;
-        
-    }  
-
-    section#planos {
-        background: linear-gradient(77deg, #23536B, #5DA8B9);
-        height: 70vh;
-
-    }
-
-
-
-    footer {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 25vh;
-        background: linear-gradient(#2e2d30, #161518ef);
-    }
-
+section#tutorial .homem-section, .p-1{
+    width: 100%;
     
-        
+}
 
+section#tutorial .homem-section img{
+    width: 100%;
+}
+
+section#tutorial .p-1 p{
+    margin: 10px 80px;
+    font-size: 21px;
+    
+}  
+
+section#planos {
+    background: linear-gradient(77deg, #23536B, #5DA8B9);
+    height: 70vh;
+
+}
+
+footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 18vh;
+    background: linear-gradient(#2e2d30, #161518ef);
 }
