@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+.fundo {
+    position: absolute;
+    z-index: -2;
+    max-width: fit-content;
+    left: -565px;
+}
+
+.logo {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    top: 30px;
+    left: 60px;
+}
+
+.logo img {
+    width: 72%;
+}
+
+.pergunta {
+    position: absolute;
+    flex-direction: row;
+    padding: 320px;
+    right: 840px;
+    color: #F6EEE8;
+    text-align: center;
+    justify-content: space-between;
+    gap: 1px;
+    width: max-content;
+    font-size: 40px;
+}
+
+
+.pergunta2 {
+    position: absolute;
+    flex-direction: row;
+    padding: 500px;
+    left: 265px;
+    color: #F6EEE8;
+    text-align: center;
+    justify-content: space-between;
+    gap: 1px;
+    width: max-content;
+    font-size: 40px;
+    margin-top: -190px;
+}
+
+.pergunta2 p {
+    position: absolute;
+    right: 26%;
+}
+
+p{
+    font-size: 17px;
+} 
+
+.texto2 {
+    padding-left: inherit;
+}
+
+
+.register button {
+    position: absolute;
+    color: #3A393C;
+    border: none;
+    border-radius: 15px;
+    left: 290px;
+    padding: 1px 25px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    bottom: 250px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.register button h2 {
+    font-size: 50px;
+    text-decoration: none;
+}
+
+.register button:hover {
+    background-color: #e6d5d5;
+    transform: translateY(-5px);
+}
+
+.login button {
+    position: absolute;
+    color: #3A393C;
+    border: none;
+    border-radius: 15px;
+    right: 16.7%;
+    padding: 1px 25px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 45px;
+    bottom: 250px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.login button h2 {
+    font-size: 50px;
+    text-decoration: none;
+}
+
+.login button:hover {
+    background-color: #e6d5d5;
+    transform: translateY(-5px);
+}
