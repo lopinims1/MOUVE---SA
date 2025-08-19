@@ -240,9 +240,120 @@ section#tutorial .p-1 p{
 
 section#planos {
     background: linear-gradient(77deg, #23536B, #5DA8B9);
-    height: 70vh;
+    height: 72vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
 
 }
+
+
+section#planos .gratis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 18.6%;
+    margin-left: 10%;
+}
+
+section#planos .gratis img {
+    position: relative;
+    z-index: 0;
+}
+
+section#planos .gratis h2 {
+    position: absolute;
+    font-family: Poppins, extrabold;
+    font-size: 52px;
+    margin-top: -14%;
+ 
+}
+
+section#planos .gratis ul {
+    position: absolute;
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    margin-top: 6.2%;
+    margin-left: -1.5%;
+  
+}
+
+section#planos .gratis ul li {
+    color: #303238e7;
+    margin: 23px 0;
+    padding-left: 36px; /* espaço pro ícone */
+    line-height: 110.5%;
+    font-weight: 600;
+}
+
+section#planos .gratis button {
+    position: absolute;
+    font-family: Poppins, sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    color: #F6EEE8;
+    background: linear-gradient(180deg, #434347, #18171a);
+    border: none;
+    padding: 8px 64px;
+    border-radius: 22px;
+    cursor: pointer;
+    margin-top: 19.5%;
+    transition: transform 0.3s ease;
+}
+
+section#planos .gratis button:hover {
+    transform: scale(1.05);
+}
+
+section#planos .basico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 36%;
+    
+}
+
+section#planos .basico img {
+    position: relative;
+    z-index: 0;
+}
+
+section#planos .basico h4 {
+    position: absolute;
+    font-family: Poppins, semibold;
+    font-size: 22.5px;
+    margin-top: -26.5%;
+    color: #10AACD;
+}
+
+section#planos .basico h2 {
+    position: absolute;
+    font-family: Poppins, extrabold;
+    font-size: 52px;
+    margin-top: -17%;
+}
+
+section#planos .basico ul {
+    position: absolute;
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    margin-top: 6.2%;
+    margin-left: -1.7%;
+
+}
+
+section#planos .basico ul li {
+    color: #303238e7;
+    margin: 23px 0;
+    padding-left: 36px; /* espaço pro ícone */
+    line-height: 110.5%;
+    font-weight: 600;
+}
+
 
 footer {
     position: relative;
