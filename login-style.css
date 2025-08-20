@@ -82,7 +82,7 @@ body {
 
 .logar button {
     position: absolute;
-    left: 300px;
+    left: 350px;
     bottom: 190px;
     text-align: center;
     text-decoration: none;
@@ -91,7 +91,7 @@ body {
     font-size: 40px;
     transition: all 0.3s;
     cursor: pointer;
-    padding: 8px 25px;
+    padding: 10px 35px;
     color: #3A393C;
     font-weight: 600;
 }
