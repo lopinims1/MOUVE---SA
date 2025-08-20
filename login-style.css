@@ -30,7 +30,7 @@ body {
     margin-top: 30px;
 }
 
-.e-s {
+.emailsenha {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -40,7 +40,7 @@ body {
     width:550px;
 }
 
-.e-s input {
+.emailsenha input {
     font-size: 30px;
     display: block;
     margin-bottom: 10px;
@@ -51,14 +51,14 @@ body {
     padding-left: 12px;
 }
 
-.e-s input::placeholder {
+.emailsenha input::placeholder {
     color: #3A393C;
     font-weight: 450;
     position: absolute;
     left: 25px;
 }
 
-.e-s input:focus {
+.emailsenha input:focus {
     outline: none;
     border: none;
     filter: drop-shadow(0 0 4px #ffffffc2);
