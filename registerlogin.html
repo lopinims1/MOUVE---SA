@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="registerlogin-style.css">
+
+  <title>Registro & Login</title>
+</head>
+<body>
+    
+    <div class="fundo">
+        <!-- imagem ou background que você já usa -->
+    </div>
+
+    <div class="logo">
+        <img src="sua-logo.png" alt="Logo">
+    </div>
+
+    <div class="textos">
+        <h1>NÃO TEM CONTA?</h1>
+
+        <p>Uma conta do Mouve garante benefícios, principalmente <br> caso tenha interesse em assinar um dos nossos planos</p>
+    </div>
+
+    <div class="textos2">
+        <h1>JÁ TEM CONTA?</h1>
+
+        <p>Se você já tiver uma conta no Mouve, se <br> conecte e usufrua do melhor que podemos oferecer</p>
+    </div>
+
+    <div class="register">
+        <button type="submit">Registre-se</button>
+    </div>
+
+    <div class="login">
+        <button type="submit">Login</button>
+    </div>
+
+    <!-- ADIÇÃO: Formulário para cadastrar (Salvar dps Zhang).)-->
+    <form id="formRegistro" style="position:absolute; bottom:120px; left:200px;">
+        <input type="text" id="nome" placeholder="Nome" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <button type="submit">Adicionar</button>
+    </form>
+
+    <!-- ADIÇÃO: Lista de registros -->
+    <ul id="listaRegistros" style="position:absolute; bottom:20px; left:200px;"></ul>
+
+    <script src="registerlogin.js"></script>
+</body>
+</html>

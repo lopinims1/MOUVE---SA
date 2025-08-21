@@ -34,7 +34,7 @@ body {
     width: 72%;
 }
 
-.pergunta {
+.textos {
     position: absolute;
     flex-direction: row;
     padding: 320px;
@@ -48,7 +48,7 @@ body {
 }
 
 
-.pergunta2 {
+.textos2 {
     position: absolute;
     flex-direction: row;
     padding: 500px;
@@ -62,19 +62,14 @@ body {
     margin-top: -190px;
 }
 
-.pergunta2 p {
+.textos2 p {
     position: absolute;
     right: 26%;
 }
 
-p{
+p {
     font-size: 17px;
 } 
-
-.texto2 {
-    padding-left: inherit;
-}
-
 
 .register button {
     position: absolute;

@@ -26,8 +26,8 @@ body {
 
 .logo {
     position: absolute;
-    left: 60px;
-    margin-top: 30px;
+    left: 75px;
+    margin-top: 40px;
 }
 
 .e-s {
@@ -36,8 +36,8 @@ body {
     gap: 30px;
     position: absolute;
     left: 150px;
-    bottom: 400px;
-    width:550px;
+    bottom: 455px;
+    width: 550px;
 }
 
 .e-s input {
@@ -45,6 +45,7 @@ body {
     display: block;
     margin-bottom: 10px;
     color: #3A393C;
+    background-color: #F6EEE8;
     border-radius: 10px;
     border: none;
     text-decoration: none;
@@ -67,13 +68,13 @@ body {
 
 .esqueci {
     position: absolute; 
-    left: 150px;
-    bottom: 350px;
+    left: 155px;
+    bottom: 420px;
     font-weight: bold
 }
 
 .esqueci a {
-    color: #e6d5d5;
+    color: #F6EEE8;
 }
 
 .esqueci a:hover {
@@ -82,18 +83,19 @@ body {
 
 .logar button {
     position: absolute;
-    left: 350px;
-    bottom: 190px;
+    left: 310px;
+    bottom: 220px;
     text-align: center;
     text-decoration: none;
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
     font-size: 40px;
     transition: all 0.3s;
     cursor: pointer;
     padding: 10px 35px;
     color: #3A393C;
     font-weight: 600;
+    box-shadow: 0px 10px 20px #141413d5;
 }
 
 .logar button:hover {
@@ -105,7 +107,7 @@ body {
 .textos {
     position: absolute;
     right: 135px;
-    bottom: 303px;
+    bottom: 370px;
     color: #F6EEE8;
     text-align: center;
     display: block;

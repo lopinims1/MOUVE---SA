@@ -1,47 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registro</title>
-  <link rel="stylesheet" href="registro.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="register.css">
+
+    <title>Register</title>
 </head>
 <body>
-    <div class="fundo">
-        <!-- imagem ou background que você já usa -->
-    </div>
+    <div class="form">
+
+        <form action="#">
+
+            <div class="informacoes">
+                
+                <input type="text" placeholder="Nome" required>
+
+                <input type="email" placeholder="E-mail" required>
+
+                <input type="password" placeholder="Senha" required>
+
+            </div>
+
+            <button type="submit">REGISTRAR</button>
+
+            <div class="textos">
+                <h1>SEJA BEM-VINDO <br> AO MOUVE!</h1>      
+                
+                <p>Ficamos felizes em te ver aqui conosco. <br> Cire uma conta e usufrua do melhor que <br> podemos oferecer.</p>
+            </div>
 
     <div class="logo">
-        <img src="sua-logo.png" alt="Logo">
-    </div>
+        <img src="login-imgs/LOGO.svg" alt="">
+      </div>
+  
+      <div class="fundo">
+        <img src="login-imgs/BG-Azul.svg" alt="">
+      </div>
 
-    <div class="pergunta">
-        <h1>Bem-vindo!</h1>
-    </div>
-
-    <div class="pergunta2">
-        <p>Cadastre-se abaixo:</p>
-    </div>
-
-    <div class="register">
-        <button><h2>Registrar</h2></button>
-    </div>
-
-    <div class="login">
-        <button><h2>Login</h2></button>
-    </div>
-
-    <!-- ADIÇÃO: Formulário para cadastrar (Salvar dps Zhang).)-->
-    <form id="formRegistro" style="position:absolute; bottom:120px; left:200px;">
-        <input type="text" id="nome" placeholder="Nome" required>
-        <input type="email" id="email" placeholder="Email" required>
-        <button type="submit">Adicionar</button>
     </form>
 
-    <!-- ADIÇÃO: Lista de registros -->
-    <ul id="listaRegistros" style="position:absolute; bottom:20px; left:200px;"></ul>
+    </div>
 
-    <script src="registro.js"></script>
 </body>
 </html>
