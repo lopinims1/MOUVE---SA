@@ -15,6 +15,13 @@ body {
     position: relative;
 }
 
+.fundo {
+    position: absolute;
+    z-index: -2;
+    max-width: fit-content;
+    left: -565px;
+}
+
 .logo {
     position: absolute;
     z-index: 1;
@@ -27,11 +34,11 @@ body {
     width: 72%;
 }
 
-.textos {
+.pergunta {
     position: absolute;
     flex-direction: row;
-    left: 150px;
-    bottom: 450px;
+    padding: 320px;
+    right: 840px;
     color: #F6EEE8;
     text-align: center;
     justify-content: space-between;
@@ -41,27 +48,33 @@ body {
 }
 
 
-.textos2 {
+.pergunta2 {
     position: absolute;
     flex-direction: row;
     padding: 500px;
-    left: 655px;
-    bottom: 4px;
+    left: 265px;
     color: #F6EEE8;
+    text-align: center;
+    justify-content: space-between;
     gap: 1px;
     width: max-content;
     font-size: 40px;
-    text-align: center;
+    margin-top: -190px;
 }
 
-.textos2 p {
+.pergunta2 p {
     position: absolute;
-    right: 600px;
+    right: 26%;
 }
 
-p {
+p{
     font-size: 17px;
 } 
+
+.texto2 {
+    padding-left: inherit;
+}
+
 
 .register button {
     position: absolute;
@@ -69,10 +82,10 @@ p {
     border: none;
     border-radius: 15px;
     left: 290px;
-    padding: 12px 22px;
+    padding: 1px 25px;
     text-align: center;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 30px;
     bottom: 250px;
     cursor: pointer;
     transition: all 0.3s;
@@ -88,21 +101,16 @@ p {
     transform: translateY(-5px);
 }
 
-.register button a {
-    text-decoration: none;
-    color: #3A393C;
-}
-
 .login button {
     position: absolute;
     color: #3A393C;
     border: none;
     border-radius: 15px;
     right: 16.7%;
-    padding: 15px 25px;
+    padding: 1px 25px;
     text-align: center;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 45px;
     bottom: 250px;
     cursor: pointer;
     transition: all 0.3s;
@@ -116,9 +124,4 @@ p {
 .login button:hover {
     background-color: #e6d5d5;
     transform: translateY(-5px);
-}
-
-.login a {
-    text-decoration: none;
-    color: #3A393C;
 }

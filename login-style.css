@@ -26,40 +26,39 @@ body {
 
 .logo {
     position: absolute;
-    left: 75px;
-    margin-top: 40px;
+    left: 60px;
+    margin-top: 30px;
 }
 
-.emailsenha {
+.e-s {
     display: flex;
     flex-direction: column;
     gap: 30px;
     position: absolute;
     left: 150px;
-    bottom: 455px;
-    width: 550px;
+    bottom: 400px;
+    width:550px;
 }
 
-.emailsenha input {
+.e-s input {
     font-size: 30px;
     display: block;
     margin-bottom: 10px;
     color: #3A393C;
-    background-color: #F6EEE8;
     border-radius: 10px;
     border: none;
     text-decoration: none;
     padding-left: 12px;
 }
 
-.emailsenha input::placeholder {
+.e-s input::placeholder {
     color: #3A393C;
     font-weight: 450;
     position: absolute;
     left: 25px;
 }
 
-.emailsenha input:focus {
+.e-s input:focus {
     outline: none;
     border: none;
     filter: drop-shadow(0 0 4px #ffffffc2);
@@ -68,13 +67,13 @@ body {
 
 .esqueci {
     position: absolute; 
-    left: 155px;
-    bottom: 420px;
+    left: 150px;
+    bottom: 350px;
     font-weight: bold
 }
 
 .esqueci a {
-    color: #F6EEE8;
+    color: #e6d5d5;
 }
 
 .esqueci a:hover {
@@ -83,19 +82,18 @@ body {
 
 .logar button {
     position: absolute;
-    left: 310px;
-    bottom: 220px;
+    left: 300px;
+    bottom: 190px;
     text-align: center;
     text-decoration: none;
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
     font-size: 40px;
     transition: all 0.3s;
     cursor: pointer;
-    padding: 10px 35px;
+    padding: 8px 25px;
     color: #3A393C;
     font-weight: 600;
-    box-shadow: 0px 10px 20px #141413d5;
 }
 
 .logar button:hover {
@@ -103,15 +101,11 @@ body {
     transform: translateY(-1px);
 }
 
-.logar button a {
-    text-decoration: none;
-    color: #1b1a1b;
-}
 
 .textos {
     position: absolute;
     right: 135px;
-    bottom: 370px;
+    bottom: 303px;
     color: #F6EEE8;
     text-align: center;
     display: block;
