@@ -267,20 +267,20 @@ section#planos .gratis .fundo-planos {
 
 section#planos .gratis .fundo-planos .fundo-preto {
     padding: 262px 182px;
-    background-color: #34363C;
-    border-radius: 18px;
+    background: linear-gradient(180deg, #38363bf6, #161518);
+    border-radius: 17px;
     position: absolute;
-    border-bottom-right-radius: 100px;
+    border-bottom-right-radius: 90px;
 }
 
 section#planos .gratis .fundo-planos .fundo-branco {
     position: relative;
     padding: 100px 170px;
     background-color: #f6eee8ef;
-    border-radius: 18px;
+    border-radius: 8.5px;
     box-shadow: 0 0 20px rgba(209, 207, 207, 0.1);
     margin-top: 87%;
-    border-bottom-right-radius: 100px;
+    border-bottom-right-radius: 88px;
 }
 
 section#planos .gratis h2 {
@@ -336,6 +336,7 @@ section#planos .basico {
     align-items: center;
     justify-content: center;
     width: 18.6%;
+    
 }
 
 
@@ -348,21 +349,24 @@ section#planos .basico .fundo-planos {
 }
 
 section#planos .basico .fundo-planos .fundo-preto {
-    padding: 262px 182px;
-    background-color: #34363C;
-    border-radius: 18px;
+    padding: 279px 198px;
+    background: linear-gradient(180deg, #38363bf6, #161518);
+    border-radius: 17px;
     position: absolute;
-    border-bottom-right-radius: 100px;
+    border-bottom-right-radius: 90px;
+    border: #10AACD 4px solid;
+    
 }
 
 section#planos .basico .fundo-planos .fundo-branco {
     position: relative;
-    padding: 100px 170px;
+    padding: 110px 184px;
     background-color: #f6eee8ef;
-    border-radius: 18px;
+    border-radius: 8.5px;
     box-shadow: 0 0 20px rgba(209, 207, 207, 0.1);
     margin-top: 87%;
-    border-bottom-right-radius: 100px;
+    border-bottom-right-radius: 88px;
+    
 }
 
 section#planos .basico h2 {
@@ -400,7 +404,7 @@ section#planos .basico button {
     color: #F6EEE8;
     background: #10AACD;
     border: none;
-    width: 16.5%;
+    width: 17.5%;
     height: 5%;
     border-radius: 7px;
     cursor: pointer;
@@ -410,6 +414,44 @@ section#planos .basico button {
 
 section#planos .basico button:hover {
    transform: scale(1.05);
+}
+
+section#planos .basico p {
+    position: absolute;
+    font-family: Poppins, sans-serif;
+    font-size: 16.5px;
+    margin-top: -8%;
+    font-weight: 300;
+    
+}
+
+section#planos .basico .preco {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    font-family: Poppins, extrabold;
+    font-size: 20px;
+    margin-top: -15%;
+}
+
+section#planos .basico .preco h3 {
+    font-size: 67px;
+    font-weight: 600;
+    
+}
+
+section#planos .basico .preco p.cifrão {
+    font-size: 32px;
+    font-weight: 600;
+    margin-left: -52%;
+    margin-top: 12%;
+}
+
+section#planos .basico .preco p.cents {
+    font-size: 34px;
+    font-weight: 600;
+    margin-left: 105%;
+    margin-top: 5%;
 }
 
 
