@@ -28,7 +28,7 @@ body {
 }
 
 .informacoes {
-    position: absolute;
+    position: fixed;
     left: 300px;
     bottom: 400px;
     align-items: center;
@@ -39,19 +39,24 @@ body {
 }
 
 .informacoes input {
-    padding-left: 10px;
-    font-size: 30px;
+    padding: 8px 10px;
+    font-size: 20px;
     text-decoration: none;
     border: none;
     border-radius: 10px;
     width: 500px;
-    color: #3A393C;;
+    color: #3A393C
 }
 
 .informacoes input::placeholder {
     font-size: 20px;
     font-weight: 700;
-    color: #3A393C;
+    color: #1b1a1bf3;
+    justify-items: center;
+}
+
+.informacoes input:focus {    
+    outline: none;
 }
 
 .textos {
@@ -78,7 +83,7 @@ body {
 button {
     position: absolute;
     bottom: 250px;
-    left: 300px;
+    left: 400px;
     transition: all 0.3s;
     cursor: pointer;
     font-size: 40px;
@@ -87,10 +92,15 @@ button {
     padding: 10px 40px;
     text-decoration: none;
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 button:hover {
     background-color: #e6d5d5;
     transform: translateY(-1px);
+}
+
+button a {
+    text-decoration: none;
+    color: #1b1a1b;
 }

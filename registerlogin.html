@@ -11,11 +11,11 @@
 <body>
     
     <div class="fundo">
-        <!-- imagem ou background que você já usa -->
+        <img src="registerlogin-imgs/fundo.svg" alt="">
     </div>
 
     <div class="logo">
-        <img src="sua-logo.png" alt="Logo">
+        <img src="login-imgs/LOGO.svg" alt="">
     </div>
 
     <div class="textos">
@@ -31,23 +31,14 @@
     </div>
 
     <div class="register">
-        <button type="submit">Registre-se</button>
+        <button id="register.button" type="submit"> <a href="register.html">REGISTRAR</a> </button>
     </div>
 
     <div class="login">
-        <button type="submit">Login</button>
+        <button id="login.button" type="submit"> <a href="login.html">LOGAR</a> </button>
     </div>
 
-    <!-- ADIÇÃO: Formulário para cadastrar (Salvar dps Zhang).)-->
-    <form id="formRegistro" style="position:absolute; bottom:120px; left:200px;">
-        <input type="text" id="nome" placeholder="Nome" required>
-        <input type="email" id="email" placeholder="Email" required>
-        <button type="submit">Adicionar</button>
-    </form>
-
-    <!-- ADIÇÃO: Lista de registros -->
-    <ul id="listaRegistros" style="position:absolute; bottom:20px; left:200px;"></ul>
-
     <script src="registerlogin.js"></script>
+
 </body>
 </html>

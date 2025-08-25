@@ -103,6 +103,10 @@ body {
     transform: translateY(-1px);
 }
 
+.logar button a {
+    text-decoration: none;
+    color: #1b1a1b;
+}
 
 .textos {
     position: absolute;
