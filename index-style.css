@@ -349,9 +349,9 @@ section#planos .basico .fundo-planos {
 }
 
 section#planos .basico .fundo-planos .fundo-preto {
-    padding: 279px 198px;
+    padding: 300px 198px;
     background: linear-gradient(180deg, #38363bf6, #161518);
-    border-radius: 17px;
+    border-radius: 19px;
     position: absolute;
     border-bottom-right-radius: 90px;
     border: #10AACD 4px solid;
@@ -360,11 +360,11 @@ section#planos .basico .fundo-planos .fundo-preto {
 
 section#planos .basico .fundo-planos .fundo-branco {
     position: relative;
-    padding: 110px 184px;
+    padding: 124px 184px;
     background-color: #f6eee8ef;
     border-radius: 8.5px;
     box-shadow: 0 0 20px rgba(209, 207, 207, 0.1);
-    margin-top: 87%;
+    margin-top: 92%;
     border-bottom-right-radius: 88px;
     
 }
@@ -436,7 +436,7 @@ section#planos .basico .preco {
 
 section#planos .basico .preco h3 {
     font-size: 67px;
-    font-weight: 600;
+    font-weight: 500;
     
 }
 
@@ -444,15 +444,17 @@ section#planos .basico .preco p.cifrão {
     font-size: 32px;
     font-weight: 600;
     margin-left: -52%;
-    margin-top: 12%;
+    margin-top: -37%;
 }
 
 section#planos .basico .preco p.cents {
     font-size: 34px;
     font-weight: 600;
-    margin-left: 105%;
-    margin-top: 5%;
+    margin-left: 100%;
+    margin-top: -20%;
 }
+
+section#planos .basico 
 
 
 footer {
