@@ -10,115 +10,97 @@
 
 body {
     display: flex;
-    justify-content: center;
     min-height: 100vh;
-    position: relative;
+    background: linear-gradient(45deg, #3A393C, #1b1a1b);
+}
+
+.fundo {
+    position: absolute;
+    right: -3.5%;
+    z-index: -2;
+    max-width: fit-content;
 }
 
 .logo {
     position: absolute;
-    z-index: 1;
-    display: flex;
-    top: 30px;
-    left: 60px;
+    left: 75px;
+    margin-top: 40px;
 }
 
-.logo img {
-    width: 72%;
+.informacoes {
+    position: fixed;
+    left: 300px;
+    bottom: 400px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    justify-content: center;
+}
+
+.informacoes input {
+    padding: 8px 10px;
+    font-size: 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    width: 500px;
+    color: #3A393C
+}
+
+.informacoes input::placeholder {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1b1a1bf3;
+    justify-items: center;
+}
+
+.informacoes input:focus {    
+    outline: none;
 }
 
 .textos {
     position: absolute;
-    flex-direction: row;
-    left: 150px;
-    bottom: 450px;
+    right: 150px;
+    bottom: 350px;
     color: #F6EEE8;
+    align-items: center;
     text-align: center;
-    justify-content: space-between;
-    gap: 1px;
-    width: max-content;
-    font-size: 40px;
+    display: block;
 }
 
-
-.textos2 {
-    position: absolute;
-    flex-direction: row;
-    padding: 500px;
-    left: 655px;
-    bottom: 4px;
-    color: #F6EEE8;
-    gap: 1px;
-    width: max-content;
-    font-size: 40px;
-    text-align: center;
+.textos h1 {
+    font-size: 60px;
+    line-height: 124.7%;
+    margin-bottom: 30px;
 }
 
-.textos2 p {
-    position: absolute;
-    right: 600px;
+.textos p {
+    margin-bottom: 20px;
+    font-size: 18px;
 }
 
-p {
-    font-size: 17px;
-} 
-
-.register button {
+button {
     position: absolute;
-    color: #3A393C;
-    border: none;
-    border-radius: 15px;
-    left: 290px;
-    padding: 12px 22px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 40px;
     bottom: 250px;
-    cursor: pointer;
+    left: 400px;
     transition: all 0.3s;
-}
-
-.register button h2 {
-    font-size: 50px;
-    text-decoration: none;
-}
-
-.register button:hover {
-    background-color: #e6d5d5;
-    transform: translateY(-5px);
-}
-
-.register button a {
-    text-decoration: none;
-    color: #3A393C;
-}
-
-.login button {
-    position: absolute;
-    color: #3A393C;
-    border: none;
-    border-radius: 15px;
-    right: 16.7%;
-    padding: 15px 25px;
-    text-align: center;
-    font-weight: bold;
+    cursor: pointer;
     font-size: 40px;
-    bottom: 250px;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.login button h2 {
-    font-size: 50px;
-    text-decoration: none;
-}
-
-.login button:hover {
-    background-color: #e6d5d5;
-    transform: translateY(-5px);
-}
-
-.login a {
-    text-decoration: none;
     color: #3A393C;
+    font-weight: 650;
+    padding: 10px 40px;
+    text-decoration: none;
+    border: none;
+    border-radius: 20px;
+}
+
+button:hover {
+    background-color: #e6d5d5;
+    transform: translateY(-1px);
+}
+
+button a {
+    text-decoration: none;
+    color: #1b1a1b;
 }
