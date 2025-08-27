@@ -43,5 +43,37 @@
 
     </div>
 
+    <script>
+        // Espera o DOM carregar
+        document.addEventListener("DOMContentLoaded", () => {
+            const form = document.querySelector("form");
+    
+            form.addEventListener("submit", (event) => {
+                event.preventDefault(); // impede o recarregamento da página
+    
+                // Pega os valores dos inputs
+                const nome = document.querySelector('input[placeholder="Nome"]').value;
+                const email = document.querySelector('input[placeholder="E-mail"]').value;
+                const senha = document.querySelector('input[placeholder="Senha"]').value;
+    
+                // Cria objeto usuário
+                const usuario = {
+                    nome,
+                    email,
+                    senha
+                };
+    
+                // Salva no localStorage (como string JSON)
+                localStorage.setItem("usuario", JSON.stringify(usuario));
+    
+                alert("Usuário registrado com sucesso!");
+    
+                // Redireciona para index.html
+                window.location.href = "index.html";
+            });
+        });
+    </script>
+    
+
 </body>
 </html>

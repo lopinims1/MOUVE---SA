@@ -364,7 +364,7 @@ section#planos .basico .fundo-planos {
 section#planos .basico .fundo-planos .fundo-preto {
     padding: 300px 198px;
     background: linear-gradient(180deg, #38363bf6, #161518);
-    border-radius: 19px;
+    border-radius: 22px;
     position: absolute;
     border-bottom-right-radius: 90px;
     border: #10AACD 6px solid;
@@ -623,15 +623,92 @@ section#planos .mouve p {
     
 }
 
-
-
 footer {
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    height: 18vh;
-    background: linear-gradient(#2e2d30, #161518ef);
+    height: 25vh;
+    background: linear-gradient(80deg, #121114fd, #272629);
 }
 
+footer .footer-logo img {
+    position: absolute;
+    width: 15%;
+    margin-left: 15%;
+    margin-top: -3%;
+    cursor: pointer;
+    filter: opacity(0.9);
 
+}   
+
+footer .social-icons {
+    position: absolute;
+    cursor: pointer;
+    margin-bottom: -5%;
+    margin-left: 18.8%;
+   
+}
+
+footer .line {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    margin-left: 35%;
+   
+}
+
+footer .line hr {
+    height: 130px;
+    border: 1.5px solid #f6eee8e8;
+    margin-right: 20px;
+}
+
+footer ul {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-left: 38.5%;
+   
+}
+
+footer ul li {
+    font-size: 15.5px;
+    font-weight: 600;
+    cursor: pointer;
+    filter: opacity(0.9);
+}   
+
+footer ul li:last-child {
+    margin-top: 8%;
+}
+
+footer h3.baixar {
+    position: absolute;
+    font-family: Poppins, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    right: 22%;
+    margin-bottom: 5%;
+    filter: opacity(0.9);
+}
+
+footer .buttons {
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    right: 22%;
+    margin-bottom: -5%;
+}
+
+footer .buttons button {
+    display: flex;
+    color: #F6EEE8;
+    background: #10AACD;
+    border: none;
+    width: 120px;
+    height: 35px;
+    border-radius: 7px;
+    transition: all 0.3s ease;
+}
