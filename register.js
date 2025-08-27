@@ -1,97 +1,76 @@
-// ---------------------------
-// Funções auxiliares de LocalStorage
-// ---------------------------
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("form");
+  if (!form) return; // segurança, caso a página não tenha <form>
 
-// Lê os registros salvos no localStorage
-function getRegistros() {
-    return JSON.parse(localStorage.getItem("registros")) || [];
-  }
-  
-  // Salva os registros no localStorage
-  function salvarRegistros(registros) {
-    localStorage.setItem("registros", JSON.stringify(registros));
-  }
-  
-  // Adiciona um novo registro
-  function adicionarRegistro(nome, email) {
-    let registros = getRegistros();
-    const novo = {
-      id: Date.now(),
-      nome,
-      email
-    };
-    registros.push(novo);
-    salvarRegistros(registros);
-    listarRegistros();
-  }
-  
-  // Edita um registro existente
-  function editarRegistro(id, novoNome, novoEmail) {
-    let registros = getRegistros();
-    registros = registros.map(r =>
-      r.id === id ? { ...r, nome: novoNome, email: novoEmail } : r
-    );
-    salvarRegistros(registros);
-    listarRegistros();
-  }
-  
-  // Exclui um registro
-  function excluirRegistro(id) {
-    let registros = getRegistros().filter(r => r.id !== id);
-    salvarRegistros(registros);
-    listarRegistros();
-  }
-  
-  // ---------------------------
-  // Renderização na tela
-  // ---------------------------
-  function listarRegistros() {
-    const lista = document.getElementById("listaRegistros");
-    if (!lista) return;
-  
-    let registros = getRegistros();
-    lista.innerHTML = "";
-  
-    registros.forEach(reg => {
-      const li = document.createElement("li");
-      li.innerHTML = `
-        <strong>${reg.nome}</strong> - ${reg.email}
-        <button onclick="editarPrompt(${reg.id})">✏️</button>
-        <button onclick="excluirRegistro(${reg.id})">❌</button>
-      `;
-      lista.appendChild(li);
-    });
-  }
-  
-  // ---------------------------
-  // Helpers para testes
-  // ---------------------------
-  function editarPrompt(id) {
-    const novoNome = prompt("Novo nome:");
-    const novoEmail = prompt("Novo email:");
-    if (novoNome && novoEmail) {
-      editarRegistro(id, novoNome, novoEmail);
-    }
-  }
-  
-  // ---------------------------
-  // Inicialização
-  // ---------------------------
-  document.addEventListener("DOMContentLoaded", () => {
-    listarRegistros();
-  
-    // Exemplo: capturar de inputs se você tiver
-    const form = document.getElementById("formRegistro");
-    if (form) {
-      form.addEventListener("submit", e => {
-        e.preventDefault();
-        const nome = document.getElementById("nome").value;
-        const email = document.getElementById("email").value;
-        if (nome && email) {
-          adicionarRegistro(nome, email);
-          form.reset();
-        }
+  const inputs = form.querySelectorAll("input");
+
+  // Identificar se é registro (3 inputs) ou login (2 inputs)
+  if (inputs.length === 3) {
+      // ======== REGISTRO ========
+      const registerBtn = document.getElementById("register.button");
+
+      registerBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          const name = inputs[0].value.trim();
+          const email = inputs[1].value.trim();
+          const password = inputs[2].value;
+
+          // Validação: só aceita emails do Gmail
+          if (!email.endsWith("@gmail.com")) {
+              alert("Por favor, use um e-mail válido do Gmail (ex: exemplo@gmail.com).");
+              return;
+          }
+
+          // Verificar se já existe conta com esse email
+          if (localStorage.getItem(email)) {
+              alert("Esse e-mail já está registrado. Faça login.");
+              return;
+          }
+
+          // Criar usuário
+          const user = { name, email, password };
+
+          // Salvar no localStorage (email = chave)
+          localStorage.setItem(email, JSON.stringify(user));
+
+          // Logar automaticamente após registro
+          localStorage.setItem("currentUser", email);
+
+          alert("Conta criada com sucesso! Redirecionando para a home...");
+          window.location.href = "home.html"; // manda direto pra home
       });
-    }
-  });
-  
+
+  } else if (inputs.length === 2) {
+      // ======== LOGIN ========
+      const loginBtn = document.getElementById("logar.button");
+
+      loginBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          const email = inputs[0].value.trim();
+          const password = inputs[1].value;
+
+          // Buscar usuário no localStorage
+          const savedUser = localStorage.getItem(email);
+
+          if (!savedUser) {
+              alert("Usuário não encontrado. Crie uma conta primeiro.");
+              return;
+          }
+
+          const user = JSON.parse(savedUser);
+
+          if (user.password !== password) {
+              alert("Senha incorreta. Tente novamente.");
+              return;
+          }
+
+          // Se chegou aqui, login válido → salva usuário atual
+          localStorage.setItem("currentUser", email);
+
+          alert("Login realizado com sucesso!");
+          window.location.href = "index.html"; // redireciona para a home
+      });
+  }
+});
