@@ -1,76 +1,115 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector("form");
-  if (!form) return; // segurança, caso a página não tenha <form>
+    const form = document.querySelector("form");
+    if (!form) return;
 
-  const inputs = form.querySelectorAll("input");
+    const inputs = form.querySelectorAll("input");
+    let nameInput, emailInput, passwordInput, registerBtn, loginBtn;
 
-  // Identificar se é registro (3 inputs) ou login (2 inputs)
-  if (inputs.length === 3) {
-      // ======== REGISTRO ========
-      const registerBtn = document.getElementById("register.button");
+    // Função para criar e inserir a div de mensagem logo após o input de senha
+    function createMessageDiv(afterInput) {
+        let div = document.createElement("div");
+        div.id = "message";
+        div.style.minHeight = "20px"; // mantém espaço para evitar salto
+        div.style.margin = "10px 0";
+        div.style.fontWeight = "bold";
+        afterInput.insertAdjacentElement('afterend', div);
+        return div;
+    }
 
-      registerBtn.addEventListener("click", (e) => {
-          e.preventDefault();
+    function showMessage(msg, color="red") {
+        messageDiv.textContent = msg;
+        messageDiv.style.color = color;
+    }
 
-          const name = inputs[0].value.trim();
-          const email = inputs[1].value.trim();
-          const password = inputs[2].value;
+    // Garante que o admin sempre exista
+    if (!localStorage.getItem("admin_geral@gmail.com")) {
+        localStorage.setItem("admin_geral@gmail.com", JSON.stringify({
+            name: "Admin",
+            email: "admin_geral@gmail.com",
+            password: "admin_geral123"
+        }));
+    }
 
-          // Validação: só aceita emails do Gmail
-          if (!email.endsWith("@gmail.com")) {
-              alert("Por favor, use um e-mail válido do Gmail (ex: exemplo@gmail.com).");
-              return;
-          }
+    // Identificar se é registro (3 inputs) ou login (2 inputs)
+    if (inputs.length === 3) {
+        // REGISTRO
+        nameInput = inputs[0];
+        emailInput = inputs[1];
+        passwordInput = inputs[2];
+        registerBtn = document.getElementById("register.button");
 
-          // Verificar se já existe conta com esse email
-          if (localStorage.getItem(email)) {
-              alert("Esse e-mail já está registrado. Faça login.");
-              return;
-          }
+        // Cria div de mensagem após senha
+        var messageDiv = createMessageDiv(passwordInput);
 
-          // Criar usuário
-          const user = { name, email, password };
+        registerBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            const name = nameInput.value.trim();
+            const email = emailInput.value.trim();
+            const password = passwordInput.value;
 
-          // Salvar no localStorage (email = chave)
-          localStorage.setItem(email, JSON.stringify(user));
+            if (!name || !email || !password) {
+                showMessage("Preencha todos os campos!");
+                return;
+            }
 
-          // Logar automaticamente após registro
-          localStorage.setItem("currentUser", email);
+            if (!email.endsWith("@gmail.com")) {
+                showMessage("Use um e-mail válido do Gmail.");
+                return;
+            }
 
-          alert("Conta criada com sucesso! Redirecionando para a home...");
-          window.location.href = "index.html"; // manda direto pra home
-      });
+            if (localStorage.getItem(email)) {
+                showMessage("Esse e-mail já está registrado. Faça login.");
+                return;
+            }
 
-  } else if (inputs.length === 2) {
-      // ======== LOGIN ========
-      const loginBtn = document.getElementById("logar.button");
+            const user = { name, email, password };
+            localStorage.setItem(email, JSON.stringify(user));
+            localStorage.setItem("currentUser", email);
 
-      loginBtn.addEventListener("click", (e) => {
-          e.preventDefault();
+            showMessage("Conta criada com sucesso.\nSeja bem-vindo ao Mouve!", "#10AACD");
+            setTimeout(() => window.location.href = "index.html", 1500);
+        });
 
-          const email = inputs[0].value.trim();
-          const password = inputs[1].value;
+    } else if (inputs.length === 2) {
+        // LOGIN
+        emailInput = inputs[0];
+        passwordInput = inputs[1];
+        loginBtn = document.getElementById("logar.button");
 
-          // Buscar usuário no localStorage
-          const savedUser = localStorage.getItem(email);
+        // Cria div de mensagem após senha
+        var messageDiv = createMessageDiv(passwordInput);
 
-          if (!savedUser) {
-              alert("Usuário não encontrado. Crie uma conta primeiro.");
-              return;
-          }
+        loginBtn.addEventListener("click", (e) => {
+            e.preventDefault();
 
-          const user = JSON.parse(savedUser);
+            const email = emailInput.value.trim();
+            const password = passwordInput.value;
 
-          if (user.password !== password) {
-              alert("Senha incorreta. Tente novamente.");
-              return;
-          }
+            if (!email || !password) {
+                showMessage("Preencha todos os campos!");
+                return;
+            }
 
-          // Se chegou aqui, login válido → salva usuário atual
-          localStorage.setItem("currentUser", email);
+            const savedUser = localStorage.getItem(email);
+            if (!savedUser) {
+                showMessage("Usuário não encontrado. Crie uma conta primeiro.");
+                return;
+            }
 
-          alert("Login realizado com sucesso!");
-          window.location.href = "index.html"; // redireciona para a home
-      });
-  }
+            const user = JSON.parse(savedUser);
+            if (user.password !== password) {
+                showMessage("Senha incorreta. Tente novamente.");
+                return;
+            }
+
+            localStorage.setItem("currentUser", email);
+
+            if (email === "admin_geral@gmail.com" && password === "admin_geral123") {
+                showMessage("Bem-vindo, administrador!", "#10AACD");
+            }
+
+            showMessage("Login realizado com sucesso!", "#10AACD");
+            setTimeout(() => window.location.href = "index.html", 1500);
+        });
+    }
 });
