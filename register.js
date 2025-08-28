@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
           localStorage.setItem("currentUser", email);
 
           alert("Conta criada com sucesso! Redirecionando para a home...");
-          window.location.href = "home.html"; // manda direto pra home
+          window.location.href = "index.html"; // manda direto pra home
       });
 
   } else if (inputs.length === 2) {
