@@ -41,3 +41,36 @@ document.addEventListener("DOMContentLoaded", () => {
           window.location.href = "index.html"; // manda direto pra home
       });
 
+  } else if (inputs.length === 2) {
+      // ======== LOGIN ========
+      const loginBtn = document.getElementById("logar.button");
+
+      loginBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          const email = inputs[0].value.trim();
+          const password = inputs[1].value;
+
+          // Buscar usuário no localStorage
+          const savedUser = localStorage.getItem(email);
+
+          if (!savedUser) {
+              alert("Usuário não encontrado. Crie uma conta primeiro.");
+              return;
+          }
+
+          const user = JSON.parse(savedUser);
+
+          if (user.password !== password) {
+              alert("Senha incorreta. Tente novamente.");
+              return;
+          }
+
+          // Se chegou aqui, login válido → salva usuário atual
+          localStorage.setItem("currentUser", email);
+
+          alert("Login realizado com sucesso!");
+          window.location.href = "index.html"; // redireciona para a home
+      });
+  }
+});

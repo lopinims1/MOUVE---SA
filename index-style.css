@@ -1,4 +1,3 @@
-
 * {
     max-width: 100%;
     margin: 0;
@@ -234,15 +233,10 @@ section#tutorial .homem-section img{
 }
 
 section#tutorial .p-1 p{
-    margin: 20px 80px;
+    margin: 10px 80px;
     font-size: 21px;
-    text-align: justify;
     
-}
-
-section#tutorial .p-1 p:last-child{
-    margin-top: 4.7%;
-}
+}  
 
 section#planos {
     background: linear-gradient(77deg, #23536B, #5DA8B9);
@@ -304,28 +298,16 @@ section#planos .gratis ul {
     font-family: Poppins, sans-serif;
     font-size: 16.5px;
     margin-top: 15%;
-    list-style: none;
-    padding-left: 10px;
+    margin-left: -1.5%;
+  
 }
 
 section#planos .gratis ul li {
-    display: flex;
-    align-items: flex-start; /* ícone sempre no topo */
-    gap: 2%; /* espaço entre ícone e texto */
-    color: #275972;
+    color: #303238e7;
     margin: 23px 0;
-    line-height: 1.4;
+    padding-left: 36px; /* espaço pro ícone */
+    line-height: 110.5%;
     font-weight: 600;
-    min-width: 320px;
-}
-
-section#planos .gratis ul li::before {
-    content: "";
-    flex-shrink: 0; /* não deixar o ícone esticar */
-    width: 5.5%;
-    height: 20px;
-    background: url("./index-imgs/check-planos.svg") no-repeat center;
-    background-size: contain;
 }
 
 section#planos .gratis button {
@@ -348,7 +330,6 @@ section#planos .gratis button:hover {
    transform: scale(1.05);
 }
 
-
 section#planos .basico {
     display: flex;
     flex-direction: column;
@@ -357,6 +338,7 @@ section#planos .basico {
     width: 18.6%;
     
 }
+
 
 section#planos .basico .fundo-planos {
     position: relative;
@@ -369,10 +351,10 @@ section#planos .basico .fundo-planos {
 section#planos .basico .fundo-planos .fundo-preto {
     padding: 300px 198px;
     background: linear-gradient(180deg, #38363bf6, #161518);
-    border-radius: 22px;
+    border-radius: 19px;
     position: absolute;
     border-bottom-right-radius: 90px;
-    border: #10AACD 6px solid;
+    border: #10AACD 4px solid;
     
 }
 
@@ -400,34 +382,18 @@ section#planos .basico h2 {
 section#planos .basico ul {
     position: absolute;
     font-family: Poppins, sans-serif;
-    font-size: 18.5px;
-    margin-top: 17%;
-    list-style: none;
-    padding-left: 10px;
+    font-size: 16.5px;
+    margin-top: 15%;
+    margin-left: -1.5%;
+  
 }
 
 section#planos .basico ul li {
-    display: flex;
-    position: relative;
-    padding-left: 25px;
-    color: #275972;
-    margin: 23px;
-    line-height: 1.4;
+    color: #303238e7;
+    margin: 23px 0;
+    padding-left: 36px; /* espaço pro ícone */
+    line-height: 110.5%;
     font-weight: 600;
-    min-width: 320px;
-}
-
-section#planos .basico ul li::before {
-    content: "";
-    position: absolute;
-    flex-shrink: 0; /* não deixa o ícone esticar */
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%); /* centraliza verticalmente */
-    width: 6%;   /* tamanho do ícone */
-    height: 20px;
-    background: url("./index-imgs/check-planos.svg") no-repeat center;
-    background-size: contain;
 }
 
 section#planos .basico button {
@@ -447,7 +413,7 @@ section#planos .basico button {
 }
 
 section#planos .basico button:hover {
-   transform: scale(1.06);
+   transform: scale(1.05);
 }
 
 section#planos .basico p {
@@ -464,12 +430,13 @@ section#planos .basico .preco {
     display: flex;
     align-items: center;
     font-family: Poppins, extrabold;
+    font-size: 20px;
     margin-top: -15%;
 }
 
 section#planos .basico .preco h3 {
     font-size: 67px;
-    font-weight: 600;
+    font-weight: 500;
     
 }
 
@@ -477,292 +444,24 @@ section#planos .basico .preco p.cifrão {
     font-size: 32px;
     font-weight: 600;
     margin-left: -52%;
-    margin-top: -35%;
+    margin-top: -37%;
 }
 
 section#planos .basico .preco p.cents {
     font-size: 34px;
     font-weight: 600;
     margin-left: 100%;
-    margin-top: -26%;
+    margin-top: -20%;
 }
 
-section#planos .basico h4 {
-    position: absolute;
-    font-family: Poppins, sans-serif;
-    font-size: 28px;
-    margin-top: -24%;
-    font-weight: 600;
-    color: #10AACD;
-    
-}
+section#planos .basico 
 
-section#planos .mouve {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 18.6%;
-    
-}
-
-section#planos .mouve .fundo-planos {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-section#planos .mouve .fundo-planos .fundo-preto {
-    padding: 262px 182px;
-    background: linear-gradient(180deg, #38363bf6, #161518);
-    border-radius: 17px;
-    position: absolute;
-    border-bottom-right-radius: 90px;
-}
-
-section#planos .mouve .fundo-planos .fundo-branco {
-    position: relative;
-    padding: 100px 170px;
-    background-color: #f6eee8ef;
-    border-radius: 8.5px;
-    box-shadow: 0 0 20px rgba(209, 207, 207, 0.1);
-    margin-top: 87%;
-    border-bottom-right-radius: 88px;
-}
-
-section#planos .mouve ul {
-    position: absolute;
-    font-family: Poppins, sans-serif;
-    font-size: 16.5px;
-    margin-top: 16%;
-    list-style: none;
-    padding-left: 20px;
-}
-
-section#planos .mouve ul li {
-    display: flex;
-    align-items: flex-start; /* ícone sempre no topo */
-    gap: 2%; /* espaço entre ícone e texto */
-    color: #275972;
-    margin: 16px 0;
-    line-height: 1.4;
-    font-weight: 600;
-    min-width: 320px;
-}
-
-section#planos .mouve ul li::before {
-    content: "";
-    flex-shrink: 0; /* não deixar o ícone esticar */
-    width: 5%;
-    height: 20px;
-    background: url("./index-imgs/check-planos.svg") no-repeat center;
-    background-size: contain;
-}
-
-section#planos .mouve button {
-    position: absolute;
-    font-family: Poppins, sans-serif;
-    font-size: 25px;
-    font-weight: 600;
-    color: #F6EEE8;
-    background: #10AACD;
-    border: none;
-    width: 16.5%;
-    height: 5%;
-    border-radius: 7px;
-    cursor: pointer;
-    margin-top: -1.7%;
-    transition: all 0.3s ease;
-}
-
-section#planos .mouve button:hover {
-   transform: scale(1.05);
-}
-
-section#planos .mouve .preco {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    font-family: Poppins, extrabold;
-    margin-top: -14%;
-}
-
-section#planos .mouve .preco h3 {
-    font-size: 67px;
-    font-weight: 600;
-    
-}
-
-section#planos .mouve .preco p.cifrão {
-    font-size: 32px;
-    font-weight: 600;
-    margin-left: -50%;
-    margin-top: -35%;
-}
-
-section#planos .mouve .preco p.cents {
-    font-size: 34px;
-    font-weight: 600;
-    margin-left: 100%;
-    margin-top: -26%;
-}
-
-section#planos .mouve h4 {
-    position: absolute;
-    font-family: Poppins, sans-serif;
-    font-size: 28px;
-    margin-top: -23%;
-    font-weight: 600;
-    color: #10AACD;
-    
-}
-
-section#planos .mouve p {
-    position: absolute;
-    font-family: Poppins, sans-serif;
-    font-size: 16.5px;
-    margin-top: -8%;
-    font-weight: 300;
-    
-}
 
 footer {
     position: relative;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 25vh;
-    background: linear-gradient(80deg, #121114fd, #272629);
-
-}
-
-footer .footer-logo img {
-    position: absolute;
-    width: 15%;
-    margin-left: 15%;
-    margin-top: -3%;
-    cursor: pointer;
-    filter: opacity(0.9);
-
-}   
-
-footer .social-icons {
-    position: absolute;
-    cursor: pointer;
-    margin-bottom: -5%;
-    margin-left: 18.8%;
-   
-}
-
-footer .line {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    margin-left: 35%;
-   
-}
-
-footer .line hr {
-    height: 130px;
-    border: 1.5px solid #f6eee8e8;
-    margin-right: 20px;
-}
-
-footer ul {
-    position: absolute;
-    display: flex;
     flex-direction: column;
-    gap: 7px;
-    margin-left: 38.5%;
-   
-}
-
-footer ul li {
-    font-size: 15.5px;
-    font-weight: 600;
-    cursor: pointer;
-    filter: opacity(0.9);
-}   
-
-footer ul li:last-child {
-    margin-top: 8%;
-}
-
-footer h3.baixar {
-    position: absolute;
-    font-family: Poppins, sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    right: 23%;
-    margin-bottom: 6%;
-    filter: opacity(0.9);
-}
-
-footer .buttons {
-    position: absolute;
-    display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
-    right: 18%;
-}
-
-footer .buttons button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #F6EEE8;
-    background: none;
-    border: 2px solid #10AACD;
-    width: 170px;
-    height: 45px;
-    border-radius: 30px;
-    transition: all 0.3s ease-in-out;
-}
-
-footer .buttons button:hover {
-    background: #10AACD;
-    box-shadow: 0 0 15px #10aacd7a;
-}
-
-
-footer button a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-footer button img {
-     margin-right: 9.2px;
-}
-
-footer button span {
-    font-size: 15px;
-    font-weight: 500;
-}
-
-footer button#linux-btn img {
-    width: 20px;
-    margin-right: 8.7px;
-}
-
-footer button#linux-btn span {
-    font-size: 16px;
-}
-
-footer button#mac-btn img {
-    width: 20.6px;
-}
-
-footer button#mac-btn span {
-    font-size: 16px;
-    margin-top: 4px;
-}
-
-footer button#mac-btn {
-    position: absolute;
-    right: 25%;
-    margin-top: 35%;
+    height: 18vh;
+    background: linear-gradient(#2e2d30, #161518ef);
 }
