@@ -6,6 +6,7 @@
     overflow: hidden;
     padding: 0;
     margin: 0;
+    text-decoration: none;
 }
 
 body {
@@ -16,20 +17,25 @@ body {
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
+    color: #F6EEE8;
+}
+
+header ul {
+    display: flex;
     position: absolute;
-    right: 300px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    right: 170px;
     top: 40px;
-    color: #F6EEE8;
+    font-size: 20px;
 }
 
-header a {
-    color: #F6EEE8;
+header ul li {
+    cursor: pointer;
 }
-
-header a:hover {
-    text-decoration: none;
-}
-
 
 .logo {
     position: absolute;
@@ -69,7 +75,7 @@ header a:hover {
     background: #35687C;
     margin: 15px;
     border-radius: 50%;
-    animation: anima 1s ease-in-out infinite alternate;
+    animation: anima 1.7s ease-in-out infinite alternate;
 }
 
 .load div:nth-child(1) {
@@ -81,19 +87,15 @@ header a:hover {
 }
 
 .load div:nth-child(3) {
-    animation-delay: -0.2s;
-}
-
-.load div:nth-child(4) {
-    animation-delay: 0s;
+    animation-delay: -0.s;
 }
 
 @keyframes anima{
     from{
-        transform: translateY(-50%);
+        transform: translateY(-100%);
     } 
     
     to{ 
-        transform: translateY(50%);
+        transform: translateY(100%);
     }
 }
