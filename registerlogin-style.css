@@ -17,18 +17,15 @@ body {
 
 .logo {
     position: absolute;
-    z-index: 1;
-    display: flex;
-    top: 30px;
-    left: 60px;
+    left: 75px;
+    margin-top: 40px;
 }
-
 
 
 .textos {
     position: absolute;
     flex-direction: row;
-    left: 150px;
+    left: 153px;
     bottom: 450px;
     color: #F6EEE8;
     text-align: center;
@@ -43,7 +40,7 @@ body {
     position: absolute;
     flex-direction: row;
     padding: 500px;
-    left: 655px;
+    left: 685px;
     bottom: 4px;
     color: #F6EEE8;
     gap: 1px;
@@ -66,7 +63,7 @@ p {
     color: #3A393C;
     border: none;
     border-radius: 15px;
-    left: 290px;
+    left: 370px;
     padding: 12px 22px;
     text-align: center;
     font-weight: bold;
@@ -96,7 +93,7 @@ p {
     color: #3A393C;
     border: none;
     border-radius: 15px;
-    right: 16.6%;
+    right: 320px;
     padding: 15px 25px;
     text-align: center;
     font-weight: bold;
