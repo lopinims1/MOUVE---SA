@@ -30,6 +30,18 @@ body {
     margin-top: 40px;
 }
 
+.email {
+    position: fixed;
+    left: 650px;
+    top: 370px;
+}
+
+.i {
+    position: fixed;
+    left: 650px;
+    top: 450px;
+}
+
 .emailsenha {
     display: flex;
     flex-direction: column;
@@ -41,7 +53,7 @@ body {
 }
 
 .emailsenha input {
-    font-size: 30px;
+    font-size: 26px;
     display: block;
     margin-bottom: 10px;
     color: #3A393C;
@@ -49,11 +61,11 @@ body {
     border-radius: 10px;
     border: none;
     text-decoration: none;
-    padding-left: 12px;
+    padding: 0px 27px
 }
 
 .emailsenha input::placeholder {
-    color: #3A393C;
+    color: #1b1a1bf3;
     font-weight: 450;
     position: absolute;
     left: 25px;
