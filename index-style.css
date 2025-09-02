@@ -35,6 +35,12 @@ header #header-logo {
     width: 230px;
 }
 
+header #header-logo img {
+    width: 100%;
+    cursor: pointer;
+
+}
+
 header ul .line {
     display: flex;
     gap: 30px;
@@ -48,6 +54,7 @@ header ul .line li {
     cursor: pointer;
     transition: 0.4s;
     position: relative;
+    margin-top: 5px;
 
 }   
 
@@ -55,7 +62,7 @@ header ul .line li::after {
     content: ' ';
     position: absolute;
     left: 50%;
-    bottom: 36px;
+    bottom: 42px;
     width: 0%;
     height: 1.6px;
     background: #10aacde8;
@@ -72,13 +79,14 @@ header ul .line li:hover::after {
 
 
 header ul li a svg {
+    margin-top: 5px;
     transition: 0.4s;
 }
 
 header ul li a svg:hover {
     fill: #10AACD;
     transform: scale(1.1);
-    filter: drop-shadow(0 0 6px #10aacd7a);
+    filter: drop-shadow(0 0 3px #10aacd7a);
 
 }
 
@@ -196,10 +204,19 @@ section#tutorial {
    
 }
 
-section#tutorial .deco-bg {
+section#tutorial .deco-tuto {
     position: relative;
-    width: 58%;
-    height: 1%;
+    display: flex;    
+}
+
+section#tutorial .sec-notebook img {
+    position: relative;
+    margin-left: 5%;
+    margin-top: 7.5%;    
+}
+
+section#tutorial .deco-bg img {
+    position: absolute;
     margin-top: 2%;
     
 }
@@ -207,9 +224,9 @@ section#tutorial .deco-bg {
 section#tutorial #title-1 h1 {
     position: absolute;
     font-family: Poppins, extrabold;
-    font-size: 46px;
-    right: 13%;
-    margin-top: -27%;
+    font-size: 47px;
+    right: 9%;
+    margin-top: -28%;
     line-height: 111.4%;
     
 }
@@ -219,14 +236,14 @@ section#tutorial ul {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    right: 9.6%;
-    margin-top: -18%;
+    right: 8%;
+    margin-top: -19.6%;
     list-style: none;
  
 }
 
 section#tutorial ul li { 
-    font-size: 23.5px;
+    font-size: 21.5px;
     font-weight: 300;
     padding-left: 36px; /* espaço pro ícone */
     position: relative;
@@ -256,7 +273,7 @@ section#tutorial #title-2 h1 {
     font-size: 52px;
     line-height: 111.4%;
     left: 5%;
-    margin-top: 3%;
+    margin-top: 1%;
     
 }
 
@@ -281,6 +298,7 @@ section#tutorial .homem-section, .p-1{
 
 section#tutorial .homem-section img{
     width: 100%;
+    margin-top: -6%;
 }
 
 section#tutorial .p-1 p{
@@ -327,6 +345,7 @@ section#planos .gratis .fundo-planos .fundo-preto {
     border-radius: 17px;
     position: absolute;
     border-bottom-right-radius: 90px;
+    filter: drop-shadow(0 0 30px #10aacd7a);
 }
 
 section#planos .gratis .fundo-planos .fundo-branco {
@@ -334,7 +353,7 @@ section#planos .gratis .fundo-planos .fundo-branco {
     padding: 100px 170px;
     background-color: #f6eee8ef;
     border-radius: 8.5px;
-    box-shadow: 0 0 20px rgba(209, 207, 207, 0.1);
+    box-shadow: 0 0 30px #23536b7e;
     margin-top: 87%;
     border-bottom-right-radius: 88px;
 }
@@ -394,7 +413,7 @@ section#planos .gratis button {
 }
 
 section#planos .gratis button:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     background: #10AACD;
     box-shadow: 0 0 12px #10aacd7a;
 }
@@ -423,8 +442,18 @@ section#planos .basico .fundo-planos .fundo-preto {
     border-radius: 22px;
     position: absolute;
     border-bottom-right-radius: 90px;
-    border: #10AACD 6px solid;
+    border: #10AACD 5px solid;
+    animation: destaque 3s ease-in-out infinite;
     
+}
+
+@keyframes destaque {
+    0%, 100% {
+        box-shadow: 0 0 20px #10aacd7a;
+    }
+    50% {
+        box-shadow: 0 0 40px #10aacd9e;
+    }
 }
 
 section#planos .basico .fundo-planos .fundo-branco {
@@ -432,9 +461,10 @@ section#planos .basico .fundo-planos .fundo-branco {
     padding: 124px 184px;
     background-color: #f6eee8ef;
     border-radius: 8.5px;
-    box-shadow: 0 0 20px rgba(209, 207, 207, 0.1);
+    box-shadow: 0 0 30px #23536b7e;
     margin-top: 92%;
     border-bottom-right-radius: 88px;
+   
     
 }
 
@@ -497,7 +527,7 @@ section#planos .basico button {
 }
 
 section#planos .basico button:hover {
-    transform: scale(1.07);
+    transform: scale(1.03);
     background: #10AACD;
     box-shadow: 0 0 12px #10aacd5b;
 }
@@ -572,6 +602,7 @@ section#planos .mouve .fundo-planos .fundo-preto {
     border-radius: 17px;
     position: absolute;
     border-bottom-right-radius: 90px;
+    filter: drop-shadow(0 0 30px #10aacd7a);
 }
 
 section#planos .mouve .fundo-planos .fundo-branco {
@@ -579,7 +610,7 @@ section#planos .mouve .fundo-planos .fundo-branco {
     padding: 100px 170px;
     background-color: #f6eee8ef;
     border-radius: 8.5px;
-    box-shadow: 0 0 20px rgba(209, 207, 207, 0.1);
+    box-shadow: 0 0 30px #23536b7e;
     margin-top: 87%;
     border-bottom-right-radius: 88px;
 }
@@ -629,7 +660,7 @@ section#planos .mouve button {
 }
 
 section#planos .mouve button:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     background: #10AACD;
     box-shadow: 0 0 12px #10aacd7a;
 }
