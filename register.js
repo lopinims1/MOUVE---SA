@@ -1,97 +1,119 @@
-// ---------------------------
-// Funções auxiliares de LocalStorage
-// ---------------------------
-
-// Lê os registros salvos no localStorage
-function getRegistros() {
-    return JSON.parse(localStorage.getItem("registros")) || [];
-  }
-  
-  // Salva os registros no localStorage
-  function salvarRegistros(registros) {
-    localStorage.setItem("registros", JSON.stringify(registros));
-  }
-  
-  // Adiciona um novo registro
-  function adicionarRegistro(nome, email) {
-    let registros = getRegistros();
-    const novo = {
-      id: Date.now(),
-      nome,
-      email
-    };
-    registros.push(novo);
-    salvarRegistros(registros);
-    listarRegistros();
-  }
-  
-  // Edita um registro existente
-  function editarRegistro(id, novoNome, novoEmail) {
-    let registros = getRegistros();
-    registros = registros.map(r =>
-      r.id === id ? { ...r, nome: novoNome, email: novoEmail } : r
-    );
-    salvarRegistros(registros);
-    listarRegistros();
-  }
-  
-  // Exclui um registro
-  function excluirRegistro(id) {
-    let registros = getRegistros().filter(r => r.id !== id);
-    salvarRegistros(registros);
-    listarRegistros();
-  }
-  
-  // ---------------------------
-  // Renderização na tela
-  // ---------------------------
-  function listarRegistros() {
-    const lista = document.getElementById("listaRegistros");
-    if (!lista) return;
-  
-    let registros = getRegistros();
-    lista.innerHTML = "";
-  
-    registros.forEach(reg => {
-      const li = document.createElement("li");
-      li.innerHTML = `
-        <strong>${reg.nome}</strong> - ${reg.email}
-        <button onclick="editarPrompt(${reg.id})">✏️</button>
-        <button onclick="excluirRegistro(${reg.id})">❌</button>
-      `;
-      lista.appendChild(li);
-    });
-  }
-  
-  // ---------------------------
-  // Helpers para testes
-  // ---------------------------
-  function editarPrompt(id) {
-    const novoNome = prompt("Novo nome:");
-    const novoEmail = prompt("Novo email:");
-    if (novoNome && novoEmail) {
-      editarRegistro(id, novoNome, novoEmail);
-    }
-  }
-  
-  // ---------------------------
-  // Inicialização
-  // ---------------------------
-  document.addEventListener("DOMContentLoaded", () => {
-    listarRegistros();
-  
-    // Exemplo: capturar de inputs se você tiver
-    const form = document.getElementById("formRegistro");
-    if (form) {
-      form.addEventListener("submit", e => {
-        e.preventDefault();
-        const nome = document.getElementById("nome").value;
-        const email = document.getElementById("email").value;
-        if (nome && email) {
-          adicionarRegistro(nome, email);
-          form.reset();
-        }
-      });
-    }
-  });
-  
+document.addEventListener("DOMContentLoaded", () => {
+ 
+    const form = document.querySelector("form");
+       if (!form) return;
+   
+       const inputs = form.querySelectorAll("input");
+       let nameInput, emailInput, passwordInput, registerBtn, loginBtn;
+   
+       // Função para criar e inserir a div de mensagem logo após o input de senha
+       function createMessageDiv(afterInput) {
+           let div = document.createElement("div");
+           div.id = "message";
+           div.style.minHeight = "26px"; // mantém espaço para evitar salto
+           div.style.margin = "-5px 4px";
+           div.style.fontWeight = "400";
+           div.style.fontSize = "17px";
+           afterInput.insertAdjacentElement('afterend', div);
+           return div;
+       }
+   
+       function showMessage(msg, color="#F04B29") {
+           messageDiv.textContent = msg;
+           messageDiv.style.color = color;
+       }
+   
+       // Garante que o admin sempre exista
+       if (!localStorage.getItem("admin@mouve.com")) {
+           localStorage.setItem("admin@mouve.com", JSON.stringify({
+               name: "Admin",
+               email: "admin@gmouve.com",
+               password: "admin123"
+           }));
+       }
+   
+       // Identificar se é registro (3 inputs) ou login (2 inputs)
+       if (inputs.length === 3) {
+           // REGISTRO
+           nameInput = inputs[0];
+           emailInput = inputs[1];
+           passwordInput = inputs[2];
+           registerBtn = document.getElementById("register.button");
+   
+           // Cria div de mensagem após senha
+           var messageDiv = createMessageDiv(passwordInput);
+   
+           registerBtn.addEventListener("click", (e) => {
+               e.preventDefault();
+               const name = nameInput.value.trim();
+               const email = emailInput.value.trim();
+               const password = passwordInput.value;
+   
+               if (!name || !email || !password) {
+                   showMessage("Preencha todos os campos!");
+                   return;
+               }
+   
+               if (!email.endsWith("@gmail.com", "@mouve.com")) {
+                   showMessage("Use um e-mail válido do Gmail.");
+                   return;
+               }
+   
+               if (localStorage.getItem(email)) {
+                   showMessage("Esse e-mail já está registrado. Faça login.");
+                   return;
+               }
+   
+               const user = { name, email, password };
+               localStorage.setItem(email, JSON.stringify(user));
+               localStorage.setItem("currentUser", email);
+   
+               showMessage("Conta criada com sucesso.\nSeja bem-vindo ao Mouve!", "#10AACD");
+               setTimeout(() => window.location.href = "index.html", 1800);
+           });
+   
+       } else if (inputs.length === 2) {
+           // LOGIN
+           emailInput = inputs[0];
+           passwordInput = inputs[1];
+           loginBtn = document.getElementById("logar.button");
+   
+           // Cria div de mensagem após senha
+           var messageDiv = createMessageDiv(passwordInput);
+   
+           loginBtn.addEventListener("click", (e) => {
+               e.preventDefault();
+   
+               const email = emailInput.value.trim();
+               const password = passwordInput.value;
+   
+               if (!email || !password) {
+                   showMessage("Preencha todos os campos!");
+                   return;
+               }
+   
+               const savedUser = localStorage.getItem(email);
+               if (!savedUser) {
+                   showMessage("Usuário não encontrado. Crie uma conta primeiro.");
+                   return;
+               }
+   
+               const user = JSON.parse(savedUser);
+               if (user.password !== password) {
+                   showMessage("Senha incorreta. Tente novamente.");
+                   return;
+               }
+   
+               localStorage.setItem("currentUser", email);
+   
+               if (email === "admin@mouve.com" && password === "admin123") {
+                   showMessage("Bem-vindo, administrador!", "#10AACD");
+                   setTimeout(() => window.location.href = "admin-index.html", 2000);
+                   return;
+               }
+   
+               showMessage("Login realizado com sucesso!", "#10AACD");
+               setTimeout(() => window.location.href = "index.html", 2000);
+           });
+       }
+   });

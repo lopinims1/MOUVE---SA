@@ -1,3 +1,4 @@
+
 * {
     max-width: 100%;
     margin: 0;
@@ -34,30 +35,59 @@ header #header-logo {
     width: 230px;
 }
 
-header ul .line {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    margin-right: 10px;
-   
-}
-
-header ul li { 
-    font-size: 18.5px;
-    font-weight: 500;
+header #header-logo img {
+    width: 100%;
     cursor: pointer;
 
 }
 
-header ul li img {
-    width: 29px;
-    height: 29px;
+header ul .line {
+    display: flex;
+    gap: 30px;
+    margin-right: 10px;
+   
+}
+
+header ul .line li { 
+    font-size: 18.5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.4s;
+    position: relative;
+    margin-top: 5px;
+
+}   
+
+header ul .line li::after {
+    content: ' ';
+    position: absolute;
+    left: 50%;
+    bottom: 42px;
+    width: 0%;
+    height: 1.6px;
+    background: #10aacde8;
+    transition : width 0.4s ease-in-out,  left 0.5s ease-in-out;
+    transform: translateX(-50%);
+
+}
+
+header ul .line li:hover::after {
+    width: 93%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+header ul li a svg {
+    margin-top: 5px;
     transition: 0.4s;
 }
 
-header ul li img:hover {
+header ul li a svg:hover {
+    fill: #10AACD;
     transform: scale(1.1);
-    filter: drop-shadow(0 0.5px 1.7px #f6eee886);
+    filter: drop-shadow(0 0 3px #10aacd7a);
+
 }
 
 main {
@@ -98,12 +128,39 @@ main p#mc-1 {
     line-height: 125.4%;
 }
 
-main img {
-    position: relative;
-    margin-left: 12%;
-    width: 22%;
+main .main-kbd {
+    display: flex;
+    margin-top: 5%;
+   
+}
+
+main .main-kbd .kbd img {
+    position: absolute;
+    margin-left: -10%;
+    margin-top: -1.4%;
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(2px 10px 12px #9290963b);
     
 }
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+
+main .main-kbd .kbd-background img {
+    position: absolute;
+    margin-top: -3%;
+    margin-left: -3.7%;
+    filter: drop-shadow(13px 13px 10px #2e2d307a);
+    
+}
+
 
 main .copy-right {
     position: absolute;
@@ -112,6 +169,8 @@ main .copy-right {
     align-items: center;
     justify-content: first baseline;
     width: 100%;
+    right: 3%;
+    top: 8%;
 }
 
 main h2 {
@@ -145,10 +204,19 @@ section#tutorial {
    
 }
 
-section#tutorial .deco-bg {
+section#tutorial .deco-tuto {
     position: relative;
-    width: 58%;
-    height: 1%;
+    display: flex;    
+}
+
+section#tutorial .sec-notebook img {
+    position: relative;
+    margin-left: 5%;
+    margin-top: 7.5%;    
+}
+
+section#tutorial .deco-bg img {
+    position: absolute;
     margin-top: 2%;
     
 }
@@ -156,9 +224,9 @@ section#tutorial .deco-bg {
 section#tutorial #title-1 h1 {
     position: absolute;
     font-family: Poppins, extrabold;
-    font-size: 46px;
-    right: 13%;
-    margin-top: -27%;
+    font-size: 47px;
+    right: 9%;
+    margin-top: -28%;
     line-height: 111.4%;
     
 }
@@ -168,14 +236,14 @@ section#tutorial ul {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    right: 9.6%;
-    margin-top: -18%;
+    right: 8%;
+    margin-top: -19.6%;
     list-style: none;
  
 }
 
 section#tutorial ul li { 
-    font-size: 23.5px;
+    font-size: 21.5px;
     font-weight: 300;
     padding-left: 36px; /* espaço pro ícone */
     position: relative;
@@ -205,7 +273,7 @@ section#tutorial #title-2 h1 {
     font-size: 52px;
     line-height: 111.4%;
     left: 5%;
-    margin-top: 3%;
+    margin-top: 1%;
     
 }
 
@@ -230,13 +298,19 @@ section#tutorial .homem-section, .p-1{
 
 section#tutorial .homem-section img{
     width: 100%;
+    margin-top: -6%;
 }
 
 section#tutorial .p-1 p{
-    margin: 10px 80px;
+    margin: 20px 80px;
     font-size: 21px;
+    text-align: justify;
     
-}  
+}
+
+section#tutorial .p-1 p:last-child{
+    margin-top: 4.7%;
+}
 
 section#planos {
     background: linear-gradient(77deg, #23536B, #5DA8B9);
@@ -271,6 +345,7 @@ section#planos .gratis .fundo-planos .fundo-preto {
     border-radius: 17px;
     position: absolute;
     border-bottom-right-radius: 90px;
+    filter: drop-shadow(0 0 30px #10aacd7a);
 }
 
 section#planos .gratis .fundo-planos .fundo-branco {
@@ -278,7 +353,7 @@ section#planos .gratis .fundo-planos .fundo-branco {
     padding: 100px 170px;
     background-color: #f6eee8ef;
     border-radius: 8.5px;
-    box-shadow: 0 0 20px rgba(209, 207, 207, 0.1);
+    box-shadow: 0 0 30px #23536b7e;
     margin-top: 87%;
     border-bottom-right-radius: 88px;
 }
@@ -298,16 +373,28 @@ section#planos .gratis ul {
     font-family: Poppins, sans-serif;
     font-size: 16.5px;
     margin-top: 15%;
-    margin-left: -1.5%;
-  
+    list-style: none;
+    padding-left: 10px;
 }
 
 section#planos .gratis ul li {
-    color: #303238e7;
+    display: flex;
+    align-items: flex-start; /* ícone sempre no topo */
+    gap: 2%; /* espaço entre ícone e texto */
+    color: #275972;
     margin: 23px 0;
-    padding-left: 36px; /* espaço pro ícone */
-    line-height: 110.5%;
+    line-height: 1.4;
     font-weight: 600;
+    min-width: 320px;
+}
+
+section#planos .gratis ul li::before {
+    content: "";
+    flex-shrink: 0; /* não deixar o ícone esticar */
+    width: 5.5%;
+    height: 20px;
+    background: url("./index-imgs/check-planos.svg") no-repeat center;
+    background-size: contain;
 }
 
 section#planos .gratis button {
@@ -315,20 +402,22 @@ section#planos .gratis button {
     font-family: Poppins, sans-serif;
     font-size: 25px;
     font-weight: 600;
-    color: #F6EEE8;
-    background: #10AACD;
-    border: none;
+    background: none;
+    border: #10AACD 2px solid;
     width: 16.5%;
     height: 5%;
-    border-radius: 7px;
+    border-radius: 18px;
     cursor: pointer;
     margin-top: -1.7%;
     transition: all 0.3s ease;
 }
 
 section#planos .gratis button:hover {
-   transform: scale(1.05);
+    transform: scale(1.02);
+    background: #10AACD;
+    box-shadow: 0 0 12px #10aacd7a;
 }
+
 
 section#planos .basico {
     display: flex;
@@ -338,7 +427,6 @@ section#planos .basico {
     width: 18.6%;
     
 }
-
 
 section#planos .basico .fundo-planos {
     position: relative;
@@ -351,11 +439,21 @@ section#planos .basico .fundo-planos {
 section#planos .basico .fundo-planos .fundo-preto {
     padding: 300px 198px;
     background: linear-gradient(180deg, #38363bf6, #161518);
-    border-radius: 19px;
+    border-radius: 22px;
     position: absolute;
     border-bottom-right-radius: 90px;
-    border: #10AACD 4px solid;
+    border: #10AACD 5px solid;
+    animation: destaque 3s ease-in-out infinite;
     
+}
+
+@keyframes destaque {
+    0%, 100% {
+        box-shadow: 0 0 20px #10aacd7a;
+    }
+    50% {
+        box-shadow: 0 0 40px #10aacd9e;
+    }
 }
 
 section#planos .basico .fundo-planos .fundo-branco {
@@ -363,9 +461,10 @@ section#planos .basico .fundo-planos .fundo-branco {
     padding: 124px 184px;
     background-color: #f6eee8ef;
     border-radius: 8.5px;
-    box-shadow: 0 0 20px rgba(209, 207, 207, 0.1);
+    box-shadow: 0 0 30px #23536b7e;
     margin-top: 92%;
     border-bottom-right-radius: 88px;
+   
     
 }
 
@@ -382,18 +481,34 @@ section#planos .basico h2 {
 section#planos .basico ul {
     position: absolute;
     font-family: Poppins, sans-serif;
-    font-size: 16.5px;
-    margin-top: 15%;
-    margin-left: -1.5%;
-  
+    font-size: 18.5px;
+    margin-top: 17%;
+    list-style: none;
+    padding-left: 10px;
 }
 
 section#planos .basico ul li {
-    color: #303238e7;
-    margin: 23px 0;
-    padding-left: 36px; /* espaço pro ícone */
-    line-height: 110.5%;
+    display: flex;
+    position: relative;
+    padding-left: 25px;
+    color: #275972;
+    margin: 23px;
+    line-height: 1.4;
     font-weight: 600;
+    min-width: 320px;
+}
+
+section#planos .basico ul li::before {
+    content: "";
+    position: absolute;
+    flex-shrink: 0; /* não deixa o ícone esticar */
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); /* centraliza verticalmente */
+    width: 6%;   /* tamanho do ícone */
+    height: 20px;
+    background: url("./index-imgs/check-planos.svg") no-repeat center;
+    background-size: contain;
 }
 
 section#planos .basico button {
@@ -401,19 +516,20 @@ section#planos .basico button {
     font-family: Poppins, sans-serif;
     font-size: 25px;
     font-weight: 600;
-    color: #F6EEE8;
-    background: #10AACD;
-    border: none;
+    background: none;
+    border: #10AACD 2px solid;
     width: 17.5%;
     height: 5%;
-    border-radius: 7px;
+    border-radius: 18px;
     cursor: pointer;
     margin-top: -1.7%;
     transition: all 0.3s ease;
 }
 
 section#planos .basico button:hover {
-   transform: scale(1.05);
+    transform: scale(1.03);
+    background: #10AACD;
+    box-shadow: 0 0 12px #10aacd5b;
 }
 
 section#planos .basico p {
@@ -430,13 +546,12 @@ section#planos .basico .preco {
     display: flex;
     align-items: center;
     font-family: Poppins, extrabold;
-    font-size: 20px;
     margin-top: -15%;
 }
 
 section#planos .basico .preco h3 {
     font-size: 67px;
-    font-weight: 500;
+    font-weight: 600;
     
 }
 
@@ -444,24 +559,296 @@ section#planos .basico .preco p.cifrão {
     font-size: 32px;
     font-weight: 600;
     margin-left: -52%;
-    margin-top: -37%;
+    margin-top: -35%;
 }
 
 section#planos .basico .preco p.cents {
     font-size: 34px;
     font-weight: 600;
     margin-left: 100%;
-    margin-top: -20%;
+    margin-top: -26%;
 }
 
-section#planos .basico 
+section#planos .basico h4 {
+    position: absolute;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    margin-top: -24%;
+    font-weight: 600;
+    color: #10AACD;
+    
+}
 
+section#planos .mouve {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 18.6%;
+    
+}
+
+section#planos .mouve .fundo-planos {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+section#planos .mouve .fundo-planos .fundo-preto {
+    padding: 262px 182px;
+    background: linear-gradient(180deg, #38363bf6, #161518);
+    border-radius: 17px;
+    position: absolute;
+    border-bottom-right-radius: 90px;
+    filter: drop-shadow(0 0 30px #10aacd7a);
+}
+
+section#planos .mouve .fundo-planos .fundo-branco {
+    position: relative;
+    padding: 100px 170px;
+    background-color: #f6eee8ef;
+    border-radius: 8.5px;
+    box-shadow: 0 0 30px #23536b7e;
+    margin-top: 87%;
+    border-bottom-right-radius: 88px;
+}
+
+section#planos .mouve ul {
+    position: absolute;
+    font-family: Poppins, sans-serif;
+    font-size: 16.5px;
+    margin-top: 16%;
+    list-style: none;
+    padding-left: 20px;
+}
+
+section#planos .mouve ul li {
+    display: flex;
+    align-items: flex-start; /* ícone sempre no topo */
+    gap: 2%; /* espaço entre ícone e texto */
+    color: #275972;
+    margin: 16px 0;
+    line-height: 1.4;
+    font-weight: 600;
+    min-width: 320px;
+}
+
+section#planos .mouve ul li::before {
+    content: "";
+    flex-shrink: 0; /* não deixar o ícone esticar */
+    width: 5%;
+    height: 20px;
+    background: url("./index-imgs/check-planos.svg") no-repeat center;
+    background-size: contain;
+}
+
+section#planos .mouve button {
+    position: absolute;
+    font-family: Poppins, sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    background: none;
+    border: #10AACD 2px solid;
+    width: 16.5%;
+    height: 5%;
+    border-radius: 18px;
+    cursor: pointer;
+    margin-top: -1.7%;
+    transition: all 0.3s ease;
+}
+
+section#planos .mouve button:hover {
+    transform: scale(1.02);
+    background: #10AACD;
+    box-shadow: 0 0 12px #10aacd7a;
+}
+
+section#planos .mouve .preco {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    font-family: Poppins, extrabold;
+    margin-top: -14%;
+}
+
+section#planos .mouve .preco h3 {
+    font-size: 67px;
+    font-weight: 600;
+    
+}
+
+section#planos .mouve .preco p.cifrão {
+    font-size: 32px;
+    font-weight: 600;
+    margin-left: -50%;
+    margin-top: -35%;
+}
+
+section#planos .mouve .preco p.cents {
+    font-size: 34px;
+    font-weight: 600;
+    margin-left: 100%;
+    margin-top: -26%;
+}
+
+section#planos .mouve h4 {
+    position: absolute;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    margin-top: -23%;
+    font-weight: 600;
+    color: #10AACD;
+    
+}
+
+section#planos .mouve p {
+    position: absolute;
+    font-family: Poppins, sans-serif;
+    font-size: 16.5px;
+    margin-top: -8%;
+    font-weight: 300;
+    
+}
 
 footer {
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    height: 18vh;
-    background: linear-gradient(#2e2d30, #161518ef);
+    height: 25vh;
+    background: linear-gradient(80deg, #121114fd, #272629);
+
+}
+
+footer .footer-logo img {
+    position: absolute;
+    width: 15%;
+    margin-left: 15%;
+    margin-top: -3%;
+    cursor: pointer;
+    filter: opacity(0.9);
+
+}   
+
+footer .social-icons {
+    position: absolute;
+    cursor: pointer;
+    margin-bottom: -5%;
+    margin-left: 18.8%;
+   
+}
+
+footer .line {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    margin-left: 35%;
+   
+}
+
+footer .line hr {
+    height: 130px;
+    border: 1.5px solid #f6eee8e8;
+    margin-right: 20px;
+}
+
+footer ul {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-left: 38.5%;
+   
+}
+
+footer ul li {
+    font-size: 15.5px;
+    font-weight: 600;
+    cursor: pointer;
+    filter: opacity(0.9);
+}   
+
+footer ul li:last-child {
+    margin-top: 8%;
+}
+
+footer h3.baixar {
+    position: absolute;
+    font-family: Poppins, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    right: 23%;
+    margin-bottom: 6%;
+    filter: opacity(0.9);
+}
+
+footer .buttons {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    right: 18%;
+}
+
+footer .buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F6EEE8;
+    background: none;
+    border: 2px solid #10AACD;
+    width: 170px;
+    height: 45px;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+footer .buttons button:hover {
+    background: #10AACD;
+    box-shadow: 0 0 15px #10aacd7a;
+  
+
+}
+
+
+footer button a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer button img {
+     margin-right: 9.2px;
+}
+
+footer button span {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+footer button#linux-btn img {
+    width: 20px;
+    margin-right: 8.7px;
+}
+
+footer button#linux-btn span {
+    font-size: 16px;
+}
+
+footer button#mac-btn img {
+    width: 20.6px;
+}
+
+footer button#mac-btn span {
+    font-size: 16px;
+    margin-top: 4px;
+}
+
+footer button#mac-btn {
+    position: absolute;
+    right: 25%;
+    margin-top: 35%;
 }
