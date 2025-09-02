@@ -30,6 +30,18 @@ body {
     margin-top: 40px;
 }
 
+.email {
+    position: fixed;
+    left: 650px;
+    top: 370px;
+}
+
+.i {
+    position: fixed;
+    left: 650px;
+    top: 450px;
+}
+
 .emailsenha {
     display: flex;
     flex-direction: column;
