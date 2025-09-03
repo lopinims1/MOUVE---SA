@@ -10,8 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
        function createMessageDiv(afterInput) {
            let div = document.createElement("div");
            div.id = "message";
+           div.style.position = "absolute";
            div.style.minHeight = "26px"; // mantém espaço para evitar salto
-           div.style.margin = "-5px 4px";
+           div.style.margin = "190px 4px";
            div.style.fontWeight = "400";
            div.style.fontSize = "17px";
            afterInput.insertAdjacentElement('afterend', div);
