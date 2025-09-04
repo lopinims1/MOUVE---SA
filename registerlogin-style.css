@@ -21,10 +21,18 @@ body {
     margin-top: 40px;
 }
 
+.fundo {
+    position: absolute;
+}
+
+.fundo img {
+    width: 100%;
+    height: 1%;
+}
+
 .logo img {
     width: 209px; 
 }
-
 
 .textos {
     position: absolute;
@@ -38,7 +46,6 @@ body {
     width: max-content;
     font-size: 40px;
 }
-
 
 .textos2 {
     position: absolute;
