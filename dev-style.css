@@ -83,12 +83,12 @@ header ul li a svg:hover {
 header h4 {
     position: absolute;
     align-items: center;
-
-    left: 47%;
-    top: 50px;
+    left: 46%;
+    top: 30px;
     font-size: 28px;
-    font-weight: 700;
+    font-weight: 600;
     cursor: pointer;
+    color: #F6EEE8;
     transition: 0.4s;
 }
 
