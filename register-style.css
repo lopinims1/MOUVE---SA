@@ -3,7 +3,6 @@
 * {
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
-    overflow: hidden;
     padding: 0;
     margin: 0;
 }
@@ -12,6 +11,7 @@ body {
     display: flex;
     min-height: 100vh;
     background: linear-gradient(45deg, #3A393C, #1b1a1b);
+    overflow: hidden;
 }
 
 .fundo {
@@ -27,10 +27,14 @@ body {
     margin-top: 40px;
 }
 
+.logo img {
+    width: 240px;
+}   
+
 .informacoes {
     position: fixed;
-    left: 300px;
-    bottom: 400px;
+    left: 200px;
+    bottom: 350px;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -39,29 +43,69 @@ body {
 }
 
 .informacoes input {
-    padding: 8px 10px;
+    padding: 8px 20px;
     font-size: 20px;
     text-decoration: none;
     border: none;
     border-radius: 10px;
-    width: 500px;
-    color: #3A393C
+    width: 600px;
+    color: #3A393C;
 }
 
 .informacoes input::placeholder {
     font-size: 20px;
-    font-weight: 700;
-    color: #1b1a1bf3;
+    font-weight: 600;
+    color: #3A393C;
     justify-items: center;
 }
 
 .informacoes input:focus {    
     outline: none;
+    box-shadow: 0 6px 10px #1f212eee;
+    padding: auto;
 }
+
+.i {
+    position: fixed;
+    color: #3A393C;
+    left: 750px;
+    bottom: 352px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.i2 {
+    position: fixed;
+    color: #3A393C;
+    left: 750px;
+    bottom: 442px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.email {
+    position: fixed;
+    color: #3A393C;
+    left: 750px;
+    bottom: 533px;
+    font-size: 24px;
+
+}
+
+
+.user {
+    position: fixed;
+    color: #3A393C;
+    left: 750px;
+    bottom: 623px;
+    font-size: 24px;
+  
+}
+
 
 .textos {
     position: absolute;
-    right: 150px;
+    right: 120px;
     bottom: 350px;
     color: #F6EEE8;
     align-items: center;
@@ -82,25 +126,23 @@ body {
 
 button {
     position: absolute;
-    bottom: 250px;
-    left: 400px;
+    bottom: 174px;
+    left: 342px;
     transition: all 0.3s;
     cursor: pointer;
     font-size: 40px;
-    color: #3A393C;
-    font-weight: 650;
+    background: none;
+    color: #F6EEE8;
+    font-weight: 550;
     padding: 10px 40px;
     text-decoration: none;
-    border: none;
-    border-radius: 20px;
+    border: #f6eee8c9 2px solid;
+    border-radius: 15px;
 }
 
 button:hover {
-    background-color: #e6d5d5;
-    transform: translateY(-1px);
+    background-color: #2d8faf;
+    box-shadow: 0px 0px 20px #10abc644;
+    border: #2d8faf 2px solid;
 }
 
-button a {
-    text-decoration: none;
-    color: #1b1a1b;
-}
